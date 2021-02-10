@@ -49,3 +49,5 @@ dump($string->append("blah")); // "Nablah"
 
 // it can repeat a string
 dump($string->repeat(5)); // "NaNaNaNaNa"
+
+// NB non of these methods change the original string that was inputted
