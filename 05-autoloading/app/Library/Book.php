@@ -6,9 +6,9 @@ namespace App\Library;
 
 class Book
 {
-    private $title;
-    private $noOfPages;
-    private $currentPage = 1;
+    private string $title;
+    private int $noOfPages;
+    private int $currentPage = 1;
 
     public function __construct($titleArg, $noOfPagesArg)
     {
@@ -21,7 +21,7 @@ class Book
         $this->currentPage += $pagesReadArg;
     }
 
-    public function currentPage()
+    public function currentPage() : int
     {
         return $this->currentPage;
     }

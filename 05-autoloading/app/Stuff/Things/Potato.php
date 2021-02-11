@@ -6,16 +6,16 @@ namespace App\Stuff\Things;
 
 class Potato
 {
-    private $waterCount = 0;
+    private int $waterCount = 0;
 
-    public function water()
+    public function water() : string
     {
         $this->waterCount += 1;
         return ($this->waterCount . " " . "water");
 
     }
 
-    public function hasGrown()
+    public function hasGrown() : bool
     {
         return $this->waterCount >= 5;
 

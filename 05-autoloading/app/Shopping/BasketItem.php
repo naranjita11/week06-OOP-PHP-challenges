@@ -8,8 +8,8 @@ namespace App\Shopping;
 
 class BasketItem
 {
-    private $type;
-    private $price;
+    private string $type;
+    private float $price;
 
     public function __construct($typeArg, $priceArg)
     {
@@ -17,17 +17,17 @@ class BasketItem
         $this->price = $priceArg;
     }
 
-    public function type()
+    public function type() : string
     {
         return $this->type;
     }
 
-    public function price()
+    public function price() : float
     {
         return $this->price;
     }
 
-    public function priceFormatted()
+    public function priceFormatted() : string
     {
         $formattedPr = number_format($this->price, 2, '.', '');
         return "£{$formattedPr}";
