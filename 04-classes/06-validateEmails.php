@@ -4,16 +4,16 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Validator
 {
-    private $email;
-    private $postcode;
+    private string $email;
+    private string $postcode;
 
-    public function email($email)
+    public function email($email) : bool
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL) === $email;
     }
 
     // generally one would use a parser to do this instead of a complex regex. This is about as complex as a regex should get. This one is courtesy of Georgia!
-    public function postcode($postcode)
+    public function postcode($postcode) : bool
     {
         return preg_match("/^[A-Z][A-Z0-9]{2,3} [0-9][A-Z]{2}$/", $postcode) ===1;
     }

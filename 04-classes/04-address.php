@@ -8,9 +8,9 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Address
 {
-    private $street;
-    private $postcode;
-    private $town;
+    private string $street;
+    private string $postcode;
+    private string $town;
 
     public function __construct($street, $postcode, $town)
     {
@@ -19,7 +19,7 @@ class Address
         $this->town = $town;
     }
 
-    public function fullAddress()
+    public function fullAddress() : string
     {
         $parts = array_filter([
             $this->street,

@@ -1,13 +1,13 @@
 <?php
 
-// Create a class that represents a phone
+declare(strict_types=1);
 
 require __DIR__ . "/vendor/autoload.php";
 
 class phone
 {
-    private $make;
-    private $model;
+    private string $make;
+    private string $model;
 
     public function __construct($make, $model)
     {
@@ -15,12 +15,12 @@ class phone
         $this->model = $model;
     }
 
-    public function make()
+    public function make() : string
     {
         return $this->make;
     }
 
-    public function model()
+    public function model() : string
     {
         return $this->model;
     }

@@ -8,29 +8,29 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Stringy
 {
-    private $str;
+    private string $str;
 
     public function __construct($str)
     {
         $this->str = $str;
     }
 
-    public function lower()
+    public function lower() : string
     {
         return strtolower($this->str);
     }
 
-    public function upper()
+    public function upper() : string
     {
         return strtoupper($this->str);
     }
 
-    public function append($newStr)
+    public function append($newStr) : string
     {
         return ($this->str . $newStr);
     }
 
-    public function repeat($x)
+    public function repeat($x) : string
     {
         return str_repeat($this->str, $x);
     }

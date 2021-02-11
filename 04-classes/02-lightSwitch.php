@@ -6,7 +6,7 @@ require __DIR__ . "/vendor/autoload.php";
 
 class LightSwitch
 {
-    private $on = false;
+    private bool $on = false;
 
 
     public function turnOn()
@@ -21,7 +21,7 @@ class LightSwitch
     }
 
     
-    public function isOn()
+    public function isOn() : bool
     {
         return $this->on;
     }
